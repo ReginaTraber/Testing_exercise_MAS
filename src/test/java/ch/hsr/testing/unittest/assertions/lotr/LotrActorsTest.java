@@ -20,17 +20,21 @@ class LotrActorsTest {
     private LotrActors lotrActors = new LotrActors();
     private TolkienCharacter frodo;
     private TolkienCharacter sauron;
+    private TolkienCharacter legolas;
 
     @BeforeEach
     void setup() {
         Optional<TolkienCharacter> frodoOpt = lotrActors.getCharactersByName("Frodo");
         Optional<TolkienCharacter> sauronOpt = lotrActors.getCharactersByName("Sauron");
+        Optional<TolkienCharacter> legolasOpt = lotrActors.getCharactersByName("Legolas");
 
         Assumptions.assumeTrue(frodoOpt.isPresent());
         Assumptions.assumeTrue(sauronOpt.isPresent());
+        Assumptions.assumeTrue(legolasOpt.isPresent());
 
         frodo = frodoOpt.get();
         sauron = sauronOpt.get();
+        legolas = legolasOpt.get();
 
 
     }

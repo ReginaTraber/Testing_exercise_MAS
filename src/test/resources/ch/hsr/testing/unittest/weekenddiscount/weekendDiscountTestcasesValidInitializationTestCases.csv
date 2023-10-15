@@ -1,0 +1,13 @@
+weekendNumber,date,expectedOutput,description
+1,2023-02-25T00:00,false,Valid weekendNumber and date at the 1st weekend
+4,2023-02-25T00:00,true,Valid weekendNumber and date at the 1st weekend
+4,2023-09-23T00:00,true,Valid weekendNumber, and date at the 4th weekend
+4,2023-09-24T23:59,true,Valid weekendNumber, and date at the 4th weekend
+1,2023-09-29T00:00,false,Valid weekendNumber, but date is before the start of the 1st weekend
+1,2023-09-29T23:59,false,Valid weekendNumber, but date is after the end of the 1st weekend
+2,2023-09-30T00:00,false,Valid weekendNumber, but date is within the 2nd weekend
+2,2023-09-30T23:59,false,Valid weekendNumber, but date is just before the end of the 2nd weekend
+3,2023-10-07T00:00,false,Valid weekendNumber, but date is within the 3rd weekend
+3,2023-10-07T23:59,false,Valid weekendNumber, but date is at the end of the 3rd weekend
+4,2023-10-14T00:00,false,Valid weekendNumber, but date is just after the end of the 3rd weekend
+1,2023-02-28T00:00,false,Valid weekendNumber, but the date is not on a weekend (Tuesday)
