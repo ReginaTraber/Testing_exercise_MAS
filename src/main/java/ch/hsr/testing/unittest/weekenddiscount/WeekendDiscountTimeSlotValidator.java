@@ -45,7 +45,7 @@ public class WeekendDiscountTimeSlotValidator {
      *                                       this month
      */
     public boolean isAuthorizedForDiscount(LocalDateTime now) throws IllegalWeekendNumberException {
-
+        // make sure a weekend number has been set already
         if (this.weekendNumber == null) {
             throw new IllegalWeekendNumberException(
                     "WeekendDiscountTimeSlotValidator has not been initialized correctly!");
