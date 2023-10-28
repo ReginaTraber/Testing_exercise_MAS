@@ -25,6 +25,19 @@ public class HotSaucesPage extends Page {
         return PageFactory.initElements(driver, SauceDetailPage.class);
 
     }
+
+    /**
+     * You can enter the name of the sauce at the end uf the url when in details of the hot sauce
+     * Allows quicker testing with different sauces.
+     *
+     * @param hrefNameOfSauce
+     * @return Context of the sauce detail page
+     */
+    public SauceDetailPage dynamicSauceDetailPage(String hrefNameOfSauce) {
+        By xPath = By.xpath("//a[contains(@href,'" + hrefNameOfSauce + "')]");
+        driver.findElement(xPath).click();
+        return PageFactory.initElements(driver, SauceDetailPage.class);
+    }
 }
 
 
