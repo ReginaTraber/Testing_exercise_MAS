@@ -1,0 +1,10 @@
+# weekendNumber, year, month, day, hour, minute, expectedResult, explanation
+1, 2023, 9, 2, 12, 0, true, "Saturday on the 1st weekend should return true if discountWeekend = 1"
+4, 2023, 12, 30, 12, 0, false, "Saturday on the 5th weekend of December 2023 should return false if discountWeekend = 4"
+4, 2032, 2, 29, 12, 0, true, "Sunday on the last day of February 2032 (a leap year) should return true if discountWeekend = 4."
+1, 2024, 9, 1, 12, 0, false, "First day of September 2024 (Sunday) should return false if discountWeekend = 1 (not considered part of 1st weekend)."
+1, 2023, 1, 2, 12, 0, false, "First Monday of January 2023 should return false (no discount during weekdays)."
+1, 2023, 1, 3, 12, 0, false, "First Tuesday of January 2023 should return false (no discount during weekdays)."
+1, 2023, 1, 4, 12, 0, false, "First Wednesday of January 2023 should return false (no discount during weekdays)."
+1, 2023, 1, 5, 12, 0, false, "First Thursday of January 2023 should return false (no discount during weekdays)."
+1, 2023, 1, 6, 12, 0, false, "First Friday of January 2023 should return false (no discount during weekdays)."
