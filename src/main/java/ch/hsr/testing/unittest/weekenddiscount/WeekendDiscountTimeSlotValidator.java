@@ -54,7 +54,6 @@ public class WeekendDiscountTimeSlotValidator {
         if (!isValidWeekendNumberForCurrentMonth(now)) {
             throw new IllegalWeekendNumberException("Invalid weekend number: " + weekendNumber);
         }
-        DayOfWeek test = now.getDayOfWeek();
         if (WEEKEND_DAYS.contains(now.getDayOfWeek())) {
             LocalDate beginningOfDiscountWeekend = LocalDate.of(
                     now.getYear(),
