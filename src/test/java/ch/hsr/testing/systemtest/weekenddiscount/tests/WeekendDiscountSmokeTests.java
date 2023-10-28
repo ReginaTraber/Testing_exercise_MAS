@@ -44,6 +44,8 @@ public class WeekendDiscountSmokeTests implements Constants {
     @BeforeEach
     public void setup() {
 
+        //TODO: Change here to your chrome driver
+        // System.setProperty("webdriver.chrome.driver", "C:\\repos" + "\\Testing_exercise_MAS\\chromedriver.exe");
         System.setProperty("webdriver.chrome.driver", getChromeDriverPath());
         ChromeOptions options = new ChromeOptions();
         options.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
