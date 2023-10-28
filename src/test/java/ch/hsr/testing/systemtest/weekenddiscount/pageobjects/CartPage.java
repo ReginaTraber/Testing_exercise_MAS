@@ -34,10 +34,6 @@ public class CartPage extends Page {
         LOG.debug("CartPage created successfully");
     }
 
-    public String getSubtotal() {
-        return subtotal;
-    }
-
     public void setSubtotal(String subtotal) {
         this.subtotal = subtotal;
     }
